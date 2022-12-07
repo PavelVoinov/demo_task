@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="diagramm">
+    <svg class="chart" viewBox="0 0 50 50">
+      <circle class="unit_grey" r="15.9" cx="50%" cy="50%"></circle>
+      <circle class="unit_green" r="15.9" cx="50%" cy="50%"></circle>
+      <circle class="unit_yellow" r="15.9" cx="50%" cy="50%"></circle>
+    </svg>
+    <img class="diagramm__flag" src="images/loyalty.svg" alt="flag">
+    <div class="diagramm_descr">
+      <div class="diagramm__descr-loyalty">
+        <div class="descr-loyalty__wrapper">
+          <div class="descr-loyalty_fz-33">72.</div>
+          <div>
+            <div class="descr-loyalty_fz-12">%</div>
+            <div class="descr-loyalty_fz-13">7</div>
+          </div>
+        </div>
+        <div>Лояльность</div>
+      </div>
+      <div class="diagramm__descr_yellow">ниже среднего</div>
+      <div class="diagramm__descr_grey">по отрасли: FMCG значений слева от медианы 52.0% - 83.1%</div>
+      <div class="diagramm__descr_increase">
+        <svg width="18px" height="9px">
+          <polygon points="0,0 18,0 9,-9" viewBox="0 0 50 50">
+        </svg>
+        <span>3.1</span>
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="legend">
+    <div class="legend__item">
+      <div class="legend__item-people">Промоутеры</div>
+      <div class="legend__item-percent">
+        <div class="legend__item-percent_top">32,0%</div>
+        <div class="legend__item-percent_bot">81
+          <img src="images/human_full.svg" alt="person">
+        </div>
+      </div>
+      <div class="legend__item-row">
+        <div class="legend__item-row_top green_top"></div>
+        <div class="legend__item-row_bot green_bot"></div>
+        <div class="legend__item-row_percent">+1.2%</div>
+      </div>
+    </div>
+
+    <div class="legend__item">
+      <div class="legend__item-people">Скептики</div>
+      <div class="legend__item-percent">
+        <div class="legend__item-percent_top">39,1%</div>
+        <div class="legend__item-percent_bot">8
+          <img src="images/human_full.svg" alt="person">
+        </div>
+      </div>
+      <div class="legend__item-row">
+        <div class="legend__item-row_top yellow_top"></div>
+        <div class="legend__item-row_bot yellow_bot"></div>
+        <div class="legend__item-row_percent">+4.8%</div>
+      </div>
+    </div>
+
+    <div class="legend__item">
+      <div class="legend__item-people">Критики</div>
+      <div class="legend__item-percent">
+        <div class="legend__item-percent_top">79,8%</div>
+        <div class="legend__item-percent_bot">7
+          <img src="images/human_full.svg" alt="person">
+        </div>
+      </div>
+      <div class="legend__item-row">
+        <div class="legend__item-row_top red_top"></div>
+        <div class="legend__item-row_bot red_bot"></div>
+        <div class="legend__item-row_percent">-9,7%</div>
+      </div>
+    </div>
+
+    <div class="promoters_one"></div>
+    <div class="promoters_two"></div>
+    <div class="promoters_three"></div>
+    <div class="promoters_four"></div>
+    <div class="promoters_five"></div>
+  </div>
+</body>
+</html>

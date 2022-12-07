@@ -1,0 +1,135 @@
+* {
+    font-family: 'Gotham Pro', sans-serif;
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    padding-top: 50px;
+}
+
+.diagramm {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.chart {
+    width: 360px;
+    height: 360px;
+    transform: rotate(-67deg);
+}
+
+.diagramm__descr_increase span{
+    color: #70A74B;
+    font-size: 14px;
+    padding-top: 5px;
+}
+
+svg polygon {
+    transform: translateY(9px);
+    fill: #70A74B;
+    stroke: none;
+}
+
+.unit_yellow, .unit_green, .unit_grey {
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+}
+
+.unit_yellow {
+    stroke: #FCD329;
+    stroke-dasharray: 27.9 100;
+    animation: fillup_yellow 2s;
+    animation-timing-function: linear;
+}
+
+.unit_green {
+    stroke: #70A84B;
+    stroke-dasharray: 61.9 100;
+    animation: fillup_green 4.5s;
+    animation-timing-function: linear;
+}
+
+.unit_grey {
+    stroke: #ECECEC;
+    stroke-dasharray: 87 100;
+}
+
+.diagramm__flag {
+    top: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    position: absolute;
+    opacity: 0.2;
+}
+
+.diagramm_descr {
+    position: absolute;
+    top: 105px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    text-align: center;
+}
+
+.diagramm__descr-loyalty {
+    font-size: 25px;
+    font-weight: 600;
+    margin-top: 5px;
+    color: #5b5b5b;
+}
+
+.descr-loyalty__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.descr-loyalty_fz-33 {
+    font-size: 33px;
+}
+
+.descr-loyalty_fz-12 {
+    font-size: 12px;
+    color: #A99BA6;
+}
+
+.descr-loyalty_fz-13 {
+    font-size: 13px;
+}
+
+.diagramm__descr_yellow {
+    color: #fbd229;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+.diagramm__descr_grey {
+    width: 158px;
+    color: #b7b2b2;
+    line-height: 15px;
+    font-size: 12px;
+}
+
+@keyframes fillup_yellow {
+    from {
+        stroke-dasharray: 0 100; 
+    }
+    to {
+        stroke-dasharray: 27.9 100;
+    }
+}
+
+@keyframes fillup_green {
+    from {
+        stroke-dasharray: 0 100; 
+    }
+    to {
+        stroke-dasharray: 61.9 100;
+    }
+}
