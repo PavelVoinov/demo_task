@@ -1,3 +1,365 @@
-@import '_diagramm.css';
-@import '_legend.css';
+/* @import '_diagramm.css';
+@import '_legend.css'; */
 
+* {
+    font-family: 'Gotham Pro', sans-serif;
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    padding-top: 50px;
+}
+
+.diagramm {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.chart {
+    width: 360px;
+    height: 360px;
+    transform: rotate(-67deg);
+}
+
+.diagramm__descr_increase span{
+    color: #70A74B;
+    font-size: 14px;
+    padding-top: 5px;
+}
+
+svg polygon {
+    transform: translateY(9px);
+    fill: #70A74B;
+    stroke: none;
+}
+
+.unit_yellow, .unit_green, .unit_grey {
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+}
+
+.unit_yellow {
+    stroke: #FCD329;
+    stroke-dasharray: 27.9 100;
+    animation: fillup_yellow 2s;
+    animation-timing-function: linear;
+}
+
+.unit_green {
+    stroke: #70A84B;
+    stroke-dasharray: 61.9 100;
+    animation: fillup_green 4.5s;
+    animation-timing-function: linear;
+}
+
+.unit_grey {
+    stroke: #ECECEC;
+    stroke-dasharray: 87 100;
+}
+
+.diagramm__flag {
+    top: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    position: absolute;
+    opacity: 0.2;
+}
+
+.diagramm_descr {
+    position: absolute;
+    top: 105px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    text-align: center;
+}
+
+.diagramm__descr-loyalty {
+    font-size: 25px;
+    font-weight: 600;
+    margin-top: 5px;
+    color: #5b5b5b;
+}
+
+.descr-loyalty__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.descr-loyalty_fz-33 {
+    font-size: 33px;
+}
+
+.descr-loyalty_fz-12 {
+    font-size: 12px;
+    color: #A99BA6;
+}
+
+.descr-loyalty_fz-13 {
+    font-size: 13px;
+}
+
+.diagramm__descr_yellow {
+    color: #fbd229;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+.diagramm__descr_grey {
+    width: 158px;
+    color: #b7b2b2;
+    line-height: 15px;
+    font-size: 12px;
+}
+
+@keyframes fillup_yellow {
+    from {
+        stroke-dasharray: 0 100; 
+    }
+    to {
+        stroke-dasharray: 27.9 100;
+    }
+}
+
+@keyframes fillup_green {
+    from {
+        stroke-dasharray: 0 100; 
+    }
+    to {
+        stroke-dasharray: 61.9 100;
+    }
+}
+
+.legend {
+    width: 230px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.legend__item {
+    width: 230px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.legend__item-people {
+    width: 80px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #555555;
+}
+
+.legend__item-percent {
+    width: 40px;
+    text-align: center;
+
+}
+
+.legend__item-percent_top {
+    font-size: 12px;
+    font-weight: 600;
+    color: #555555;
+}
+
+.legend__item-percent_bot {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    gap: 3px;
+    font-size: 12px;
+    color: #9999b3;
+    margin-top: 7px;
+}
+
+.legend__item-percent_bot img {
+    height: 12px;
+    width: 12px;
+    opacity: 0.2;
+
+}
+
+.legend__item-row {
+    position: relative;
+    width: 90px;
+    height: 33px;
+    border: 1px solid #ECECEC;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+}
+
+.legend__item-row_top {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    height: 27px;
+    border-top-left-radius: 4px;
+}
+
+.legend__item-row_bot {
+    position: absolute;
+    top: 26px;
+    left: -1px;
+    height: 8px;
+    border-bottom-left-radius: 4px;
+}
+
+.legend__item-row_percent {
+    position: absolute;
+    top: 10px;
+    right: 6px;
+    font-size: 12px;
+}
+
+.green_top {
+    width: calc(33.2% + 1px);
+    background-color: #70a74b;
+    animation: fillup-top_green 2s;
+}
+
+.green_bot {
+    background-color: #b5d0a2;
+    width: calc(32% + 1px);
+    animation: fillup-bot_green 2s;
+}
+
+.yellow_top {
+    width: calc(39.1% + 1px);
+    background-color: #fbd229;
+    animation: fillup-top_yellow 2s;
+}
+
+.yellow_bot {
+    background-color: #fae691;
+    width: calc(34.3% + 1px);
+    animation: fillup-bot_yellow 2s;
+}
+
+.red_top {
+    width: calc(27% + 1px);
+    background-color: #ED5243;
+    animation: fillup-top_red 2s;
+}
+
+.red_bot {
+    background-color: #f3a69e;
+    width: calc(35% + 1px);
+    animation: fillup-bot_red 2s;
+}
+
+.promoters_one {
+    position: absolute;
+    height: 190px;
+    width: 25px;
+    border-top-left-radius: 6px;
+    border-top: 2px solid #b1b1b1;
+    border-left: 2px solid #b1b1b1;
+    top: -185px;
+    left: -35px;
+}
+
+.promoters_two {
+    position: absolute;
+    height: 20px;
+    width: 15px;
+    border-top: 2px solid #b1b1b1;
+    border-left: 2px solid #b1b1b1;
+    top: 7px;
+    left: -35px;
+}
+
+.promoters_three {
+    position: absolute;
+    height: 2px;
+    width: 12px;
+    background-color: #b1b1b1;
+    text-align: center;
+    font-size: 12px;
+    top: 39px;
+    left: -40px;
+}
+
+.promoters_four {
+    position: absolute;
+    height: 12px;
+    width: 2px;
+    background-color: #b1b1b1;
+    text-align: center;
+    font-size: 12px;
+    top: 34px;
+    left: -35px;
+}
+
+.promoters_five {
+    position: absolute;
+    height: 20px;
+    width: 12px;
+    border-bottom: 2px solid #b1b1b1;
+    border-left: 2px solid #b1b1b1;
+    border-bottom-left-radius: 6px;
+    top: 49px;
+    left: -35px;
+}
+
+@keyframes fillup-top_green {
+    from {
+        width: 0; 
+    }
+    to {
+        width: calc(33.2% + 1px);
+    }
+}
+
+@keyframes fillup-bot_green {
+    from {
+        width: 0; 
+    }
+    to {
+        width: calc(32% + 1px);
+    }
+}
+
+@keyframes fillup-top_yellow {
+    from {
+        width: 0; 
+    }
+    to {
+        width: calc(39.1% + 1px);
+    }
+}
+
+@keyframes fillup-bot_yellow {
+    from {
+        width: 0; 
+    }
+    to {
+        width: calc(34.3% + 1px);
+    }
+}
+
+@keyframes fillup-top_red {
+    from {
+        width: 0; 
+    }
+    to {
+        width: calc(27% + 1px);
+    }
+}
+
+@keyframes fillup-bot_red {
+    from {
+        width: 0; 
+    }
+    to {
+        width: calc(35% + 1px);
+    }
+}
